@@ -6,14 +6,14 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-    if (message.content === 'ping') {
-    	message.channel.send('PONG!');
+    if (message.content === ',about') {
+    	message.channel.send('`Weebbot v1.000 now with 0 commands and no features xd`');
   	}
 });
 
 client.on('message', message => {
     if (message.content === 'bing') {
-    	message.reply('BONG!');
+    	message.reply('use google hehe');
   	}
 });
 
