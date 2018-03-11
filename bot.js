@@ -1,21 +1,24 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
+var Prefix = ',';
+
 client.on('ready', () => {
     console.log('I am ready!');
 });
 
+// Commands begin here
+
 client.on('message', message => {
-    if (message.content === ',about') {
-    	message.channel.send('`Weebbot v1.000 now with 0 commands and no features xd`');
+    if (message.content === Prefix + 'about') {
+    	message.channel.send('` Weebbot v1.001 - Compiled 11th of March 2018 `');
   	}
 });
 
 client.on('message', message => {
-    if (message.content === 'bing') {
-    	message.reply('use google hehe');
-  	}
+	if (message.content === Prefix + 'prefix') {
+		message.channel.send('` The prefix is ' + Prefix + '`')
+	}
 });
 
-// THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
